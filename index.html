@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant BMS · Sri Lankan Kitchen in Pierrefonds</title>
+<meta name="description" content="Sri Lankan takeout in Pierrefonds. Kothu roti chopped to order, chicken and mutton biryani, string hoppers, rolls. Call (514) 683-9090.">
+<meta name="theme-color" content="#0b110d">
+
+<meta property="og:title" content="Restaurant BMS · Sri Lankan Kitchen in Pierrefonds">
+<meta property="og:description" content="Kothu chopped to order, biryani layered slow, rolls fried golden. 12205 Boulevard Gouin O, Pierrefonds.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero-kothu.jpg">
+
+<link rel="icon" type="image/svg+xml" href="img/logo.svg">
+<link rel="preload" as="image" href="img/hero-kothu.webp" fetchpriority="high">
+<script>
+/* Pre-paint: skip the opening splash on repeat views and for reduced motion.
+   Runs before first paint so there is never a flash either way.
+   #intro in the URL always replays the opening (for demos). */
+try {
+  var replay = location.hash === '#intro' || location.hash === '#introhold';
+  if (!replay && (sessionStorage.getItem('bmsIntro') || matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    document.documentElement.classList.add('intro-skip');
+  }
+  if (sessionStorage.getItem('bmsWipe')) {
+    document.documentElement.classList.add('wipe-in');
+  }
+} catch (e) {}
+</script>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&f[]=zodiak@400,401,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=9">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant BMS",
+  "servesCuisine": ["Sri Lankan", "South Indian"],
+  "telephone": "+15146839090",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12205 Boulevard Gouin O",
+    "addressLocality": "Pierrefonds",
+    "addressRegion": "QC",
+    "postalCode": "H8Z 1V9",
+    "addressCountry": "CA"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "20:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#menu">Skip to menu</a>
+
+<!-- ═══════════ OPENING SPLASH · the plate is set ═══════════ -->
+<div class="splash" id="splash" aria-hidden="true">
+  <div class="splash-badge">
+    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="leaf" d="M0 0 C 8 -14, 30 -16, 40 -2 C 28 8, 8 8, 0 0 Z"/>
+        <linearGradient id="leafFill" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#3b9a3f"/>
+          <stop offset="1" stop-color="#57b84b"/>
+        </linearGradient>
+      </defs>
+      <circle cx="256" cy="256" r="250" fill="#fdfcf8"/>
+      <g fill="none" id="plate">
+        <circle id="ring1" cx="256" cy="256" r="188" stroke="#c9cdd2" stroke-width="2.5" pathLength="1"/>
+        <circle id="ring2" cx="256" cy="256" r="176" stroke="#b6bbc2" stroke-width="9" stroke-dasharray="2.5 7" opacity="0.75" pathLength="1"/>
+        <circle id="ring3" cx="256" cy="256" r="162" stroke="#d5d8dc" stroke-width="1.75" pathLength="1"/>
+      </g>
+      <g id="branchL">
+        <path class="stem" d="M150 418 Q 44 320 78 138" fill="none" stroke="#a34b28" stroke-width="5" stroke-linecap="round" pathLength="1"/>
+        <g class="leaf-g" style="--i:0"><g transform="translate(121 386.5) rotate(-72.5)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+        <g class="leaf-g" style="--i:1"><g transform="translate(121 386.5) rotate(-182.5) scale(1 -1)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+        <g class="leaf-g" style="--i:2"><g transform="translate(99 351.6) rotate(-62.5) scale(0.95)"><use href="#leaf" fill="#4caf50"/></g></g>
+        <g class="leaf-g" style="--i:3"><g transform="translate(99 351.6) rotate(-172.5) scale(0.95 -0.95)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+        <g class="leaf-g" style="--i:4"><g transform="translate(83 312.5) rotate(-52.5) scale(0.9)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+        <g class="leaf-g" style="--i:5"><g transform="translate(83 312.5) rotate(-162.5) scale(0.9 -0.9)"><use href="#leaf" fill="#4caf50"/></g></g>
+        <g class="leaf-g" style="--i:6"><g transform="translate(73.2 270.2) rotate(-43.4) scale(0.85)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+        <g class="leaf-g" style="--i:7"><g transform="translate(73.2 270.2) rotate(-153.4) scale(0.85 -0.85)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+        <g class="leaf-g" style="--i:8"><g transform="translate(70 223) rotate(-35.4) scale(0.8)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+        <g class="leaf-g" style="--i:9"><g transform="translate(70 223) rotate(-145.4) scale(0.8 -0.8)"><use href="#leaf" fill="#4caf50"/></g></g>
+        <g class="leaf-g" style="--i:10"><g transform="translate(72.6 173.6) rotate(-28.4) scale(0.75)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+        <g class="leaf-g" style="--i:11"><g transform="translate(72.6 173.6) rotate(-138.4) scale(0.75 -0.75)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+        <g class="leaf-g" style="--i:12"><g transform="translate(78 138) rotate(-75) scale(0.7)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+      </g>
+      <use id="branchR" href="#branchL" transform="translate(512 0) scale(-1 1)"/>
+      <text id="txtRestaurant" x="256" y="182" text-anchor="middle"
+            font-family="'Clash Display','Avenir Next',system-ui,sans-serif" font-weight="600"
+            font-size="33" letter-spacing="1.5" fill="#171b1d">Restaurant</text>
+      <text id="txtBMS" x="256" y="308" text-anchor="middle"
+            font-family="Georgia,'Times New Roman',serif" font-weight="700"
+            font-size="122" letter-spacing="8" fill="#f07436">BMS</text>
+      <text id="txtTamil" x="256" y="374" text-anchor="middle"
+            font-family="'Tamil MN','InaiMathi','Noto Sans Tamil','Nirmala UI',sans-serif" font-weight="700"
+            font-size="42" fill="#171b1d">உணவகம்</text>
+    </svg>
+  </div>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Restaurant BMS, home">
+    <img class="nav-logo" src="img/logo.svg" alt="" width="40" height="40">
+    <span class="nav-mark">BMS</span>
+    <span class="nav-sub">Sri Lankan Kitchen</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#craft">Craft</a>
+    <a href="menu.html">Menu</a>
+    <a href="catering.html">Catering</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn btn-solid" href="tel:+15146839090">Call to order</a>
+  </div>
+  <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilemenu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobilemenu" hidden>
+  <nav aria-label="Mobile">
+    <a href="#craft">Craft</a>
+    <a href="menu.html">Menu</a>
+    <a href="catering.html">Catering</a>
+    <a href="#visit">Visit</a>
+    <a class="btn btn-solid" href="tel:+15146839090">Call to order</a>
+  </nav>
+</div>
+
+<main id="top">
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="img/hero-kothu.webp" alt="" fetchpriority="high">
+    <video class="hero-video" id="herovideo" muted loop playsinline preload="metadata" hidden>
+      <source src="img/hero-loop.mp4" type="video/mp4">
+    </video>
+    <div class="hero-scrim"></div>
+    <div class="steam"></div>
+  </div>
+
+  <div class="hero-inner">
+    <p class="eyebrow reveal-load" style="--d:.1s">Sri Lankan kitchen · Pierrefonds</p>
+    <h1 class="hero-title" id="chop">You <span class="tick">hear</span> it before you taste it.</h1>
+    <div class="blade" aria-hidden="true"></div>
+    <p class="hero-sub reveal-load" style="--d:1.15s">Kothu chopped to order on a ringing griddle, biryani layered slow, rolls fried golden. Takeout and catering on Boulevard Gouin.</p>
+    <div class="hero-ctas reveal-load" style="--d:1.3s">
+      <a class="btn btn-solid" href="tel:+15146839090">Call to order</a>
+      <a class="btn btn-ghost" href="#menu">See the menu</a>
+    </div>
+  </div>
+
+  <div class="hero-sentinel" id="hero-sentinel" aria-hidden="true"></div>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Kothu Roti</span><i></i><span>Chicken Biryani</span><i></i><span>String Hoppers</span><i></i><span>Mutton Rolls</span><i></i><span>Pittu</span><i></i><span>Veg Thali</span><i></i><span>Seafood Fried Rice</span><i></i><span>Chili Chicken</span><i></i>
+    <span>Kothu Roti</span><i></i><span>Chicken Biryani</span><i></i><span>String Hoppers</span><i></i><span>Mutton Rolls</span><i></i><span>Pittu</span><i></i><span>Veg Thali</span><i></i><span>Seafood Fried Rice</span><i></i><span>Chili Chicken</span><i></i>
+  </div>
+</div>
+
+<!-- ═══════════ THE CRAFT ═══════════ -->
+<section class="craft" id="craft">
+  <div class="wrap">
+    <h2 class="rm"><span>The griddle never rests.<br>Except Wednesdays.</span></h2>
+    <p class="craft-lede reveal" style="--d:.08s">Nothing here waits under a heat lamp. When you order kothu, the roti hits the iron, the blades start ringing, and the whole shop knows. We ask your spice level before the kitchen ever sees your ticket.</p>
+
+    <ul class="craft-row" role="list">
+      <li class="card reveal" style="--d:.05s">
+        <span class="craft-word" lang="ta">கொத்து</span>
+        <h3>The chop</h3>
+        <p>Kothu means chopped. Roti, egg, meat and curry, cut together on the flat iron until they become one thing.</p>
+      </li>
+      <li class="card reveal" style="--d:.15s">
+        <span class="craft-word">Dum</span>
+        <h3>The layers</h3>
+        <p>Biryani built in layers and finished dum style, sealed and slow, so the saffron rice steams in the gravy instead of sitting on it.</p>
+      </li>
+      <li class="card reveal" style="--d:.25s">
+        <span class="craft-word">1 to 5</span>
+        <h3>Your heat</h3>
+        <p>Every order is asked for its spice level. Mild for the kids, five for the brave. Same dish, your fire.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════ MENU BENTO ═══════════ -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2 class="rm"><span>The greatest hits.</span></h2>
+    <p class="menu-lede reveal" style="--d:.08s">The full menu runs much deeper. <a class="lede-link" href="menu.html">Read it here</a> or ask when you call.</p>
+
+    <div class="bento">
+      <figure class="cell cell-biryani iw" style="--d:.05s">
+        <img src="img/biryani.webp" alt="Chicken biryani with saffron rice, fried onions and boiled egg" loading="lazy">
+        <figcaption><strong>Chicken Biryani</strong><span>The one the reviews argue about. Also in mutton.</span></figcaption>
+      </figure>
+
+      <figure class="cell cell-rolls iw" style="--d:.12s">
+        <img src="img/rolls.webp" alt="Golden crumbed mutton rolls with chili sauce" loading="lazy">
+        <figcaption><strong>Mutton Rolls</strong><span>Crumbed, fried golden, gone fast.</span></figcaption>
+      </figure>
+
+      <div class="cell cell-spice reveal" style="--d:.19s">
+        <p class="spice-big">Your heat,<br>1 to 5.</p>
+        <p class="spice-small">Tell us once. The kitchen remembers the regulars.</p>
+      </div>
+
+      <figure class="cell cell-chili iw" style="--d:.26s">
+        <img src="img/chili-chicken.webp" alt="Glossy chili chicken with charred peppers" loading="lazy">
+        <figcaption><strong>Chili Chicken</strong><span>Caramelized, glossy, loud.</span></figcaption>
+      </figure>
+
+      <figure class="cell cell-hoppers iw" style="--d:.33s">
+        <img src="img/hoppers.webp" alt="String hoppers with coconut sambol and dhal curry" loading="lazy">
+        <figcaption><strong>String Hoppers</strong><span>Steamed fresh, with sambol and dhal.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ VEG BAND ═══════════ -->
+<section class="band">
+  <img src="img/spread.webp" alt="Sri Lankan vegetarian feast spread on banana leaves" loading="lazy">
+  <div class="band-scrim"></div>
+  <div class="band-copy">
+    <h2 class="rm"><span>Vegetarian runs deep here.</span></h2>
+    <p class="reveal" style="--d:.1s">Thali, pittu, sambol, dhal. Half the menu never needed the meat.</p>
+  </div>
+</section>
+
+<!-- ═══════════ REELS STAGE (pattern from Lala Masala) ═══════════
+     A sticky phone stays centred while you scroll; the active reel
+     advances with scroll progress. Real @bmsrestaurant footage.
+     The rounded phone is a physical object, not UI: the radius-0
+     rule applies to interface, not to things that exist. -->
+<section class="reels-stage" id="reels" aria-label="Instagram reels from BMS">
+  <div class="reels-sticky">
+    <span class="reels-word" aria-hidden="true">@bmsrestaurant</span>
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="pr-v" data-src="media/reel-a.mp4" data-caption="On site at a wedding: trays by the hundred." poster="media/catering-1.webp" muted loop playsinline preload="none"></video>
+        <video class="pr-v" data-src="media/catering-2.mp4" data-caption="Biryani boxed for the whole hall." poster="media/catering-2.webp" muted loop playsinline preload="none"></video>
+        <video class="pr-v" data-src="media/catering-3.mp4" data-caption="Banana leaf, the original takeout box." poster="media/catering-3.webp" muted loop playsinline preload="none"></video>
+      </div>
+    </div>
+    <div class="reels-meta">
+      <p id="reelcaption">On site at a wedding: trays by the hundred.</p>
+      <a class="lede-link" href="https://www.instagram.com/bmsrestaurant/" target="_blank" rel="noopener">Follow @bmsrestaurant</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ REVIEWS ═══════════ -->
+<section class="reviews">
+  <div class="wrap rev-grid">
+    <div class="rev-score reveal">
+      <span class="rev-num" data-counter="4.7" data-decimals="1">4.7</span>
+      <p>from <span data-counter="116">116</span> Google reviews.<br>84% give five stars.</p>
+    </div>
+    <div class="rev-quotes">
+      <blockquote class="rev-big card reveal" style="--d:.1s">
+        <p>"The best chicken biryani I have had in a long time."</p>
+        <cite>Google review</cite>
+      </blockquote>
+      <blockquote class="card reveal" style="--d:.2s">
+        <p>"Piping hot kothu, made exactly to my spice level."</p>
+        <cite>Google review</cite>
+      </blockquote>
+      <blockquote class="card reveal" style="--d:.3s">
+        <p>"Welcoming to kids, generous portions, honest prices."</p>
+        <cite>Google review</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ VISIT ═══════════ -->
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-info">
+      <h2 class="rm"><span>On Gouin, by the river.</span></h2>
+      <address class="reveal" style="--d:.08s">
+        12205 Boulevard Gouin O<br>
+        Pierrefonds, QC H8Z 1V9
+      </address>
+      <a class="visit-phone reveal" style="--d:.14s" href="tel:+15146839090">(514) 683‑9090</a>
+      <div class="visit-tags reveal" style="--d:.2s">
+        <span>Takeout</span><span>Delivery</span><span>Catering</span>
+      </div>
+      <div class="visit-ctas reveal" style="--d:.26s">
+        <a class="btn btn-solid" href="tel:+15146839090">Call to order</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=12205+Boulevard+Gouin+O,+Pierrefonds,+QC+H8Z+1V9" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <div class="visit-hours card reveal" style="--d:.15s">
+      <h3>Hours</h3>
+      <dl>
+        <div><dt>Monday</dt><dd>11 AM to 8 PM</dd></div>
+        <div><dt>Tuesday</dt><dd>11 AM to 8 PM</dd></div>
+        <div class="closed"><dt>Wednesday</dt><dd>We rest.</dd></div>
+        <div><dt>Thursday</dt><dd>11 AM to 8 PM</dd></div>
+        <div><dt>Friday</dt><dd>11 AM to 8 PM</dd></div>
+        <div><dt>Saturday</dt><dd>11 AM to 8 PM</dd></div>
+        <div><dt>Sunday</dt><dd>11 AM to 8 PM</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FINALE · the griddle glow (ported from Flocons) ═══════════
+     The one section where the brand orange carries the background:
+     the page's lighting story ends warm, the way service ends at the iron. -->
+<section class="finale">
+  <div class="steam" aria-hidden="true"></div>
+  <div class="wrap finale-inner">
+    <h2 class="rm"><span>Come hear it for yourself.</span></h2>
+    <p class="reveal" style="--d:.1s">One call. We ask your heat. The blades do the rest.</p>
+    <div class="finale-cta reveal" style="--d:.2s">
+      <a class="btn btn-ink" href="tel:+15146839090">Call to order</a>
+    </div>
+    <p class="finale-note reveal" style="--d:.3s">Open 11 to 8 · Closed Wednesdays</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════ MOBILE ACTION BAR (ported from Naseeb) ═══════════ -->
+<div class="action-bar" id="actionbar" aria-label="Quick actions">
+  <a href="tel:+15146839090">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Call
+  </a>
+  <a href="https://maps.google.com/?q=12205+Boulevard+Gouin+O,+Pierrefonds,+QC+H8Z+1V9" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3"/></svg>
+    Directions
+  </a>
+  <a class="ab-accent" href="#menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10" stroke-linecap="round"/></svg>
+    Menu
+  </a>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <span class="foot-water" aria-hidden="true">உணவகம்</span>
+  <div class="wrap foot-grid">
+    <span class="foot-mark">BMS</span>
+    <p>Sri Lankan kitchen in Pierrefonds.<br>12205 Boulevard Gouin O · <a href="tel:+15146839090">(514) 683‑9090</a></p>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="https://www.instagram.com/bmsrestaurant/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="foot-note">© 2026 Restaurant BMS. Closed Wednesdays.</p>
+  </div>
+</footer>
+
+<script src="js/lenis.min.js?v=9"></script>
+<script src="js/gsap.min.js?v=9"></script>
+<script src="js/ScrollTrigger.min.js?v=9"></script>
+<script src="app.js?v=9"></script>
+<script src="js/motion.js?v=9"></script>
+</body>
+</html>

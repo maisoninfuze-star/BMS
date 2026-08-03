@@ -1,0 +1,53 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Restaurant BMS logo">
+  <!-- Recreation of the BMS Instagram badge: white circle, curry-leaf
+       wreath, ornamental plate rim, Restaurant / BMS / உணவகம் -->
+  <defs>
+    <path id="leaf" d="M0 0 C 8 -14, 30 -16, 40 -2 C 28 8, 8 8, 0 0 Z"/>
+    <linearGradient id="leafFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b9a3f"/>
+      <stop offset="1" stop-color="#57b84b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- badge ground -->
+  <circle cx="256" cy="256" r="250" fill="#fdfcf8"/>
+
+  <!-- plate rim, simplified to three rings -->
+  <g fill="none" id="plate">
+    <circle id="ring1" cx="256" cy="256" r="188" stroke="#c9cdd2" stroke-width="2.5" pathLength="1"/>
+    <circle id="ring2" cx="256" cy="256" r="176" stroke="#b6bbc2" stroke-width="9" stroke-dasharray="2.5 7" opacity="0.75" pathLength="1"/>
+    <circle id="ring3" cx="256" cy="256" r="162" stroke="#d5d8dc" stroke-width="1.75" pathLength="1"/>
+  </g>
+
+  <!-- left curry-leaf branch -->
+  <g id="branchL">
+    <path class="stem" d="M150 418 Q 44 320 78 138" fill="none" stroke="#a34b28" stroke-width="5" stroke-linecap="round" pathLength="1"/>
+    <g class="leaf-g" style="--i:0"><g transform="translate(121 386.5) rotate(-72.5)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:1"><g transform="translate(121 386.5) rotate(-182.5) scale(1 -1)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:2"><g transform="translate(99 351.6) rotate(-62.5) scale(0.95)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:3"><g transform="translate(99 351.6) rotate(-172.5) scale(0.95 -0.95)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:4"><g transform="translate(83 312.5) rotate(-52.5) scale(0.9)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:5"><g transform="translate(83 312.5) rotate(-162.5) scale(0.9 -0.9)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:6"><g transform="translate(73.2 270.2) rotate(-43.4) scale(0.85)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:7"><g transform="translate(73.2 270.2) rotate(-153.4) scale(0.85 -0.85)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:8"><g transform="translate(70 223) rotate(-35.4) scale(0.8)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:9"><g transform="translate(70 223) rotate(-145.4) scale(0.8 -0.8)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:10"><g transform="translate(72.6 173.6) rotate(-28.4) scale(0.75)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:11"><g transform="translate(72.6 173.6) rotate(-138.4) scale(0.75 -0.75)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:12"><g transform="translate(78 138) rotate(-75) scale(0.7)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+  </g>
+
+  <!-- right branch: mirror -->
+  <use id="branchR" href="#branchL" transform="translate(512 0) scale(-1 1)"/>
+
+  <!-- wordmarks -->
+  <text id="txtRestaurant" x="256" y="182" text-anchor="middle"
+        font-family="'Clash Display','Avenir Next',system-ui,sans-serif" font-weight="600"
+        font-size="33" letter-spacing="1.5" fill="#171b1d">Restaurant</text>
+  <text id="txtBMS" x="256" y="308" text-anchor="middle"
+        font-family="Georgia,'Times New Roman',serif" font-weight="700"
+        font-size="122" letter-spacing="8" fill="#f07436">BMS</text>
+  <text id="txtTamil" x="256" y="374" text-anchor="middle"
+        font-family="'Tamil MN','InaiMathi','Noto Sans Tamil','Nirmala UI',sans-serif" font-weight="700"
+        font-size="42" fill="#171b1d">உணவகம்</text>
+</svg>

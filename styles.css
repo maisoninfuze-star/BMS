@@ -1,24 +1,28 @@
 /* ════════════════════════════════════════════════════════════════
    RESTAURANT BMS · Design system "Curry Leaf"
    ════════════════════════════════════════════════════════════════
-   Ground: deep curry-leaf green-black, not brown, not obsidian.
-   Text:   coconut bone.
-   Accent: BMS brand orange #f07436, sampled from their Instagram
-           logo. ONE accent, used small: lines, ticks, the
-           closed-Wednesday mark. Never as a large fill except the
-           two solid CTAs and one bento cell, which is its job.
+   PALETTE (owner brief, 2026-08-02): main colour GREEN, secondary
+   WHITE. Deep Sri Lankan green is the ground and dominant surface;
+   warm white/cream is the secondary (text and the ghost button).
+   Ground: deep forest green #0e2a1c, moody not black.
+   Text:   warm cream (the white, softened so it never glares).
+   Accent: fresh leaf green #7ac043, echoing the wreath in their
+           logo. Used for lines, ticks, links, the closed-Wednesday
+           mark, and the loud green blocks (CTAs, spice cell, finale).
+           The only orange left on the site lives inside their real
+           logo, untouched.
    Shape:  radius 0 everywhere. The knife made this site.
    Type:   Clash Display for display, Satoshi for body.
    ════════════════════════════════════════════════════════════════ */
 
 :root {
-  --ink: #0b110d;
-  --moss: #101812;
-  --moss-2: #17231b;
-  --bone: #f1ebdf;
-  --bone-dim: #a9a897;
-  --brand: #f07436;
-  --line: rgba(241, 235, 223, 0.13);
+  --ink: #0e2a1c;
+  --moss: #123321;
+  --moss-2: #163a27;
+  --bone: #f1ede2;
+  --bone-dim: #a0b2a3;
+  --brand: #7ac043;
+  --line: rgba(241, 237, 226, 0.14);
 
   /* Three voices, one rule: Clash Display is the brand speaking,
      Zodiak (ITF's editorial serif) is the food and the guests
@@ -108,7 +112,7 @@ a { color: inherit; }
    instant you head back up (direction from Lenis). */
 .nav.away { translate: 0 -105%; }
 .nav.solid {
-  background: rgba(11, 17, 13, 0.82);
+  background: rgba(9, 26, 17, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom-color: var(--line);
@@ -160,8 +164,8 @@ a { color: inherit; }
 .hero-scrim {
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(11,17,13,0.55) 0%, rgba(11,17,13,0.18) 40%, rgba(11,17,13,0.86) 88%),
-    linear-gradient(100deg, rgba(11,17,13,0.62) 0%, rgba(11,17,13,0.05) 60%);
+    linear-gradient(180deg, rgba(9, 26, 17,0.55) 0%, rgba(9, 26, 17,0.18) 40%, rgba(9, 26, 17,0.86) 88%),
+    linear-gradient(100deg, rgba(9, 26, 17,0.62) 0%, rgba(9, 26, 17,0.05) 60%);
 }
 
 /* Steam: two blurred plumes drifting up. Decor only, cheap, fixed count. */
@@ -337,7 +341,7 @@ a { color: inherit; }
 .cell figcaption {
   position: absolute; inset: auto 0 0 0;
   padding: 2.4rem 1.4rem 1.2rem;
-  background: linear-gradient(180deg, transparent, rgba(11, 17, 13, 0.88));
+  background: linear-gradient(180deg, transparent, rgba(9, 26, 17, 0.88));
   display: flex; flex-direction: column; gap: 0.15rem;
 }
 .cell figcaption strong { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; }
@@ -371,7 +375,7 @@ a { color: inherit; }
 .band img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .band-scrim {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(11,17,13,0.65) 0%, rgba(11,17,13,0.1) 45%, rgba(11,17,13,0.82) 100%);
+  background: linear-gradient(180deg, rgba(9, 26, 17,0.65) 0%, rgba(9, 26, 17,0.1) 45%, rgba(9, 26, 17,0.82) 100%);
 }
 .band-copy { position: relative; z-index: 2; width: 100%; max-width: 1320px; margin: 0 auto; padding: var(--section-y) var(--gutter) clamp(3rem, 8vh, 5rem); }
 .band-copy h2 { font-size: var(--text-h2); margin-bottom: 0.7rem; }
@@ -437,6 +441,27 @@ a { color: inherit; }
   .reels-stage { height: auto; padding-block: var(--section-y); }
   .reels-sticky { position: static; height: auto; }
   .phone-screen video:first-child { opacity: 1; }
+}
+
+/* ── Menu editorial interlude (full-width food moment) ────── */
+.menu-shot {
+  position: relative; overflow: clip;
+  margin: clamp(3rem, 7vh, 6rem) 0;
+  border: 1px solid var(--line);
+}
+.menu-shot img {
+  width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .menu-shot img { transition: scale 0.9s var(--ease-soft); }
+  .menu-shot:hover img { scale: 1.04; }
+}
+.menu-shot figcaption {
+  position: absolute; inset: auto 0 0 0;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(1.15rem, 2.4vw, 1.9rem); color: var(--bone);
+  background: linear-gradient(180deg, transparent, rgba(9, 26, 17, 0.88));
 }
 
 /* ── Reviews ─────────────────────────────────────────────── */
@@ -527,7 +552,7 @@ a { color: inherit; }
 .finale .steam { opacity: 0.5; }
 .finale-inner { position: relative; z-index: 2; }
 .finale h2 { font-size: var(--text-h2); margin-bottom: 1rem; }
-.finale p { color: rgba(11, 17, 13, 0.72); max-width: 44ch; margin-inline: auto; font-weight: 500; }
+.finale p { color: rgba(9, 26, 17, 0.72); max-width: 44ch; margin-inline: auto; font-weight: 500; }
 .finale-cta { margin-top: 2.2rem; }
 .btn-ink { background: var(--ink); color: var(--bone); }
 .btn-ink:hover { background: var(--moss-2); }
@@ -633,7 +658,7 @@ html.lenis, html.lenis body { height: auto; }
 }
 .ph-scrim {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(11,17,13,0.6) 0%, rgba(11,17,13,0.25) 45%, rgba(11,17,13,0.92) 100%);
+  background: linear-gradient(180deg, rgba(9, 26, 17,0.6) 0%, rgba(9, 26, 17,0.25) 45%, rgba(9, 26, 17,0.92) 100%);
 }
 .ph-inner {
   position: relative; z-index: 2; width: 100%;
@@ -703,8 +728,20 @@ html.lenis, html.lenis body { height: auto; }
   gap: clamp(0.9rem, 1.4vw, 1.4rem);
 }
 .station {
-  padding: clamp(1.6rem, 3vw, 2.6rem);
-  display: flex; flex-direction: column; gap: 0.7rem;
+  padding: 0; overflow: clip;
+  display: flex; flex-direction: column;
+}
+.station img {
+  width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+  display: block;
+}
+.station-body {
+  padding: clamp(1.5rem, 2.6vw, 2.3rem);
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .station img { transition: scale 0.8s var(--ease-soft); }
+  .station:hover img { scale: 1.05; }
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .station { transition: translate 0.45s var(--ease-soft), box-shadow 0.45s var(--ease-soft); }
@@ -712,10 +749,13 @@ html.lenis, html.lenis body { height: auto; }
 }
 .station h3 { font-size: clamp(1.4rem, 2.2vw, 2rem); }
 .station p { font-size: 0.98rem; }
-.station-appam { background: var(--brand); color: var(--ink); }
-.station-appam p { color: rgba(11,17,13,0.75); }
-.station-dessert { background: var(--moss-2); }
-.station-dessert p { color: var(--bone-dim); }
+/* Appam card is the loud green block; boosted specificity so it wins
+   over the .card gradient, dark text for contrast on bright green. */
+.stations .station-appam { background: var(--brand); }
+.stations .station-appam .station-body { color: var(--ink); }
+.stations .station-appam .station-body p { color: rgba(9, 26, 17, 0.82); }
+.stations .station-dessert { background: var(--moss-2); }
+.stations .station-dessert .station-body p { color: var(--bone-dim); }
 
 .reel-grid {
   display: grid; grid-template-columns: repeat(2, minmax(0, 340px));
@@ -748,12 +788,12 @@ html.lenis, html.lenis body { height: auto; }
 .cta-quiet p { color: var(--bone-dim); max-width: 46ch; margin-inline: auto; }
 .cta-quiet .btn { margin-top: 2rem; }
 .cta-sub { margin-top: 1.6rem; font-size: 0.92rem; }
-.cta-sub a { color: var(--brand); text-decoration: none; border-bottom: 1px solid rgba(240,116,54,0.4); }
+.cta-sub a { color: var(--brand); text-decoration: none; border-bottom: 1px solid rgba(122, 192, 67,0.4); }
 .cta-sub a:hover { border-bottom-color: var(--brand); }
 
 .nav-links a.active { opacity: 1; color: var(--brand); }
 
-.lede-link { color: var(--brand); text-decoration: none; border-bottom: 1px solid rgba(240,116,54,0.4); }
+.lede-link { color: var(--brand); text-decoration: none; border-bottom: 1px solid rgba(122, 192, 67,0.4); }
 .lede-link:hover { border-bottom-color: var(--brand); }
 
 .foot-links { display: flex; gap: 1.6rem; margin-top: 0.4rem; }
@@ -837,7 +877,7 @@ html.wipe-in.wipe-out body::before {
    tinted shadow, and a 3-degree pointer tilt set by app.js via
    --rx/--ry on fine pointers. */
 .card {
-  background: linear-gradient(150deg, #1a291f, #0e1611);
+  background: linear-gradient(150deg, #1c4a30, #0f2a1d);
   border: 1px solid rgba(241, 235, 223, 0.09);
   transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   transform-style: preserve-3d;
@@ -860,7 +900,7 @@ html.wipe-in.wipe-out body::before {
   }
   .card:hover {
     translate: 0 -6px;
-    border-color: rgba(240, 116, 54, 0.4);
+    border-color: rgba(122, 192, 67, 0.4);
     box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.65);
   }
 }
@@ -1019,7 +1059,7 @@ html:not(.intro-skip) body:has(.splash:not(.done)) :is(.reveal-load, .blade, .he
   position: fixed; inset: auto 0 0 0; z-index: 96;
   display: none;
   grid-template-columns: 1fr 1fr 1fr;
-  background: rgba(11, 17, 13, 0.94);
+  background: rgba(9, 26, 17, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid var(--line);

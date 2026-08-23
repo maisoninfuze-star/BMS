@@ -152,6 +152,7 @@ a { color: inherit; }
 .hero-bg { position: absolute; inset: 0; }
 .hero-bg img {
   width: 100%; height: 100%; object-fit: cover;
+  object-position: 22% 50%;
   transform: translate(calc(var(--mx, 0) * 8px), calc(var(--my, 0) * 5px));
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -704,6 +705,13 @@ html.lenis, html.lenis body { height: auto; }
 }
 .mi:hover .mi-name::after { transform: scaleX(1); }
 .mi p { font-size: 0.92rem; color: var(--bone-dim); margin-top: 0.35rem; }
+/* Name on the left, price on the right, baseline-aligned. */
+.mi-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.mi-price {
+  flex: none;
+  font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+  color: var(--brand); white-space: nowrap; letter-spacing: 0.01em;
+}
 .mi { padding: 0.9rem 1rem; margin: -0.9rem -1rem; transition: background 0.35s var(--ease-soft); }
 @media (hover: hover) { .mi:hover { background: rgba(241, 235, 223, 0.045); } }
 .mi-tag {

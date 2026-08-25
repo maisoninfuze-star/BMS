@@ -177,20 +177,6 @@ a { color: inherit; }
   }
 }
 
-/* Hero film: the owner's kothu chop. Sits over the still, fades in
-   only once it can actually play, so the graded photo is always the
-   first paint and the fallback. */
-.hero-chop {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%; object-fit: cover;
-  object-position: 50% 42%;
-  opacity: 0; transition: opacity 1.1s var(--ease-soft);
-  pointer-events: none;
-}
-.hero.chop-on .hero-chop { opacity: 1; }
-.hero.chop-on .hero-bg img { animation: none; }
-@media (prefers-reduced-motion: reduce) { .hero-chop { display: none; } }
-
 .hero-scrim {
   position: absolute; inset: 0;
   background:
@@ -1214,3 +1200,49 @@ html:not(.intro-skip) body:has(.splash:not(.done)) :is(.reveal-load, .blade, .he
   .hero-inner { padding-bottom: 3rem; }
   .band { min-height: 55vh; }
 }
+
+/* ── The emblem, built a second time in the finale ──────────────
+   The opening splash runs once per session, so from the second visit
+   onwards nobody ever sees the mark assemble. This repeats the build
+   where the page closes: the plate is laid, the curry-leaf wreath
+   grows, then the name lands. Driven by .in, which the existing
+   reveal observer already adds. */
+
+.finale-badge {
+  width: min(210px, 46vw);
+  margin: 0 auto clamp(1.75rem, 4vw, 2.75rem);
+}
+.finale-badge__svg { width: 100%; height: auto; display: block; }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Start state only while JS can undo it — if the observer never runs,
+     `.in` is absent but so is the hidden state, because these rules only
+     hide what they also animate back. */
+  .finale-badge[data-badge] #f-plate circle { stroke-dashoffset: 1; }
+  .finale-badge[data-badge] .stem { stroke-dashoffset: 1; }
+  .finale-badge[data-badge] .leaf-g { opacity: 0; transform: scale(0.4); transform-origin: center; transform-box: fill-box; }
+  .finale-badge[data-badge] :is(#f-txtRestaurant, #f-txtBMS, #f-txtTamil) { opacity: 0; }
+
+  .finale-badge.in #f-plate circle {
+    animation: badge-ring 0.85s var(--ease-soft, cubic-bezier(0.22,1,0.36,1)) both;
+  }
+  .finale-badge.in #f-ring2 { animation-delay: 0.1s; }
+  .finale-badge.in #f-ring3 { animation-delay: 0.2s; }
+
+  .finale-badge.in .stem {
+    animation: badge-ring 0.7s var(--ease-soft, cubic-bezier(0.22,1,0.36,1)) 0.5s both;
+  }
+  .finale-badge.in .leaf-g {
+    animation: badge-leaf 0.42s cubic-bezier(0.34, 1.4, 0.5, 1) both;
+    animation-delay: calc(0.72s + var(--i, 0) * 0.045s);
+  }
+  .finale-badge.in #f-txtBMS        { animation: badge-word 0.5s ease-out 1.42s both; }
+  .finale-badge.in #f-txtRestaurant { animation: badge-word 0.5s ease-out 1.56s both; }
+  .finale-badge.in #f-txtTamil      { animation: badge-word 0.5s ease-out 1.64s both; }
+
+  @keyframes badge-ring { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes badge-leaf { from { opacity: 0; transform: scale(0.4); } to { opacity: 1; transform: scale(1); } }
+  @keyframes badge-word { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+
+@media (max-width: 760px) { .finale-badge { width: min(160px, 42vw); } }

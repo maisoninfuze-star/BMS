@@ -334,6 +334,26 @@
     });
   }
 
+  /* ── Hero film: the kothu chop ────────────────────────────
+     Deferred to window load so it never competes with the LCP
+     image, and only revealed once it can genuinely play. The
+     graded still stays underneath as poster and fallback. */
+  var heroEl = document.getElementById('hero');
+  var chop = document.getElementById('herochop');
+  if (heroEl && chop && !reduceMotion) {
+    var startChop = function () {
+      chop.addEventListener('error', function () { chop.remove(); }, true);
+      chop.addEventListener('canplay', function () {
+        heroEl.classList.add('chop-on');
+        chop.play().catch(function () {});
+      }, { once: true });
+      chop.src = chop.getAttribute('data-src');
+      chop.load();
+    };
+    if (document.readyState === 'complete') startChop();
+    else window.addEventListener('load', startChop, { once: true });
+  }
+
   /* ── Gallery films (owner's kitchen clips) ────────────────
      IntersectionObserver rather than a scroll library, so play
      never depends on Lenis or GSAP being ready. Sources attach

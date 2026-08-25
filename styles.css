@@ -177,6 +177,20 @@ a { color: inherit; }
   }
 }
 
+/* Hero film: the owner's kothu chop. Sits over the still, fades in
+   only once it can actually play, so the graded photo is always the
+   first paint and the fallback. */
+.hero-chop {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: 50% 42%;
+  opacity: 0; transition: opacity 1.1s var(--ease-soft);
+  pointer-events: none;
+}
+.hero.chop-on .hero-chop { opacity: 1; }
+.hero.chop-on .hero-bg img { animation: none; }
+@media (prefers-reduced-motion: reduce) { .hero-chop { display: none; } }
+
 .hero-scrim {
   position: absolute; inset: 0;
   background:

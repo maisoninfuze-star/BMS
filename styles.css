@@ -162,6 +162,21 @@ a { color: inherit; }
     to { scale: 1.04; }
   }
 }
+/* Art-directed hero: phones get a portrait crop framed on the trays,
+   because the wide desktop crop magnifies to an unreadable slice on a
+   narrow viewport. Gentler Ken Burns there too. */
+.hero-bg picture { position: absolute; inset: 0; display: block; }
+@media (max-width: 760px) {
+  .hero-bg img { object-position: 50% 50%; }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) {
+  .hero-bg img { scale: 1.06; animation: kenburns-m 18s var(--ease-soft) forwards; }
+  @keyframes kenburns-m {
+    from { scale: 1.06; }
+    to { scale: 1.0; }
+  }
+}
+
 .hero-scrim {
   position: absolute; inset: 0;
   background:
@@ -263,6 +278,25 @@ a { color: inherit; }
 }
 
 .hero-sentinel { position: absolute; top: 82vh; height: 1px; width: 1px; }
+
+/* Split hero on phones. The counter is a wide subject: behind a tall
+   full-bleed viewport it magnifies into an unreadable slice, so here
+   it becomes a band above the copy, and the copy sits on solid green
+   where it is always legible. */
+@media (max-width: 760px) {
+  .hero { min-height: 0; display: block; }
+  .hero-bg { position: relative; inset: auto; height: 40dvh; min-height: 260px; }
+  /* Only darken enough for the nav to read at the top, then a short
+     fade at the very bottom so the band meets the copy cleanly. */
+  .hero-scrim {
+    background: linear-gradient(180deg,
+      rgba(9, 26, 17, 0.46) 0%,
+      rgba(9, 26, 17, 0.05) 34%,
+      rgba(9, 26, 17, 0.05) 74%,
+      var(--ink) 100%);
+  }
+  .hero-inner { padding: 2rem var(--gutter) 3rem; }
+}
 
 /* ── Marquee (the only one on the page) ──────────────────── */
 .marquee {

@@ -240,6 +240,7 @@
     });
   }
 
+
   /* ══ 6 · Finale: the glow arrives ═══════════════════════════
      The orange block wipes up from the bottom edge as it enters,
      the one loud moment earning a loud entrance. */

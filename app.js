@@ -334,6 +334,38 @@
     });
   }
 
+  /* ── Gallery films (owner's kitchen clips) ────────────────
+     IntersectionObserver rather than a scroll library, so play
+     never depends on Lenis or GSAP being ready. Sources attach
+     on first approach; each clip plays only while on screen. */
+  var galVids = Array.prototype.slice.call(document.querySelectorAll('.gal-v'));
+  if (galVids.length && 'IntersectionObserver' in window) {
+    var attach = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var v = e.target;
+        if (!v.getAttribute('src')) {
+          v.setAttribute('src', v.getAttribute('data-src'));
+          v.load();
+        }
+        attach.unobserve(v);
+      });
+    }, { rootMargin: '600px 0px' });
+
+    var playPause = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting && !reduceMotion) {
+          v.play().catch(function () {});
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+
+    galVids.forEach(function (v) { attach.observe(v); playPause.observe(v); });
+  }
+
   /* ── Magnetic CTAs (ported from Meggie Perle) ─────────────
      Buttons lean toward the cursor and spring back on exit.
      Direct transform writes, no state, pointer-only. */

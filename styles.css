@@ -481,6 +481,23 @@ a { color: inherit; }
   .mc-shot { max-width: 260px; margin-top: 1.2rem; }
 }
 
+
+/* ── Catering tray feature (owner's own photo) ─────────────── */
+.tray-shot {
+  max-width: 780px; margin-inline: auto;
+  border: 1px solid var(--line); overflow: clip;
+}
+.tray-shot img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; display: block; }
+.tray-shot figcaption {
+  padding: 1.1rem 1.3rem;
+  font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.35rem); color: var(--bone-dim);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .tray-shot img { transition: scale 0.8s var(--ease-soft); }
+  .tray-shot:hover img { scale: 1.03; }
+}
+
 /* ── Reviews ─────────────────────────────────────────────── */
 .reviews { padding-block: var(--section-y); }
 .rev-grid {

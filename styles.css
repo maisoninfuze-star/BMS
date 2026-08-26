@@ -1128,12 +1128,13 @@ html:not(.intro-skip) body:has(.splash:not(.done)) :is(.reveal-load, .blade, .he
     from { opacity: 0; translate: 0 0.22em; scale: 1 0.55; }
     to { opacity: 1; translate: 0 0; scale: 1 1; }
   }
-  .splash #txtRestaurant, .splash #txtTamil {
+  .splash #txtRestaurant, .splash #txtTamil, .splash #txtEst {
     opacity: 0;
     animation: rise-in 0.45s var(--ease-soft) both;
   }
   .splash #txtRestaurant { animation-delay: 1.85s; }
   .splash #txtTamil { animation-delay: 1.95s; }
+  .splash #txtEst { animation-delay: 2.08s; }
 }
 @media (prefers-reduced-motion: reduce) {
   .splash { display: none; }
@@ -1238,7 +1239,7 @@ html:not(.intro-skip) body:has(.splash:not(.done)) :is(.reveal-load, .blade, .he
   .finale-badge[data-badge] #f-plate circle { stroke-dashoffset: 1; }
   .finale-badge[data-badge] .stem { stroke-dashoffset: 1; }
   .finale-badge[data-badge] .leaf-g { opacity: 0; transform: scale(0.4); transform-origin: center; transform-box: fill-box; }
-  .finale-badge[data-badge] :is(#f-txtRestaurant, #f-txtBMS, #f-txtTamil) { opacity: 0; }
+  .finale-badge[data-badge] :is(#f-txtRestaurant, #f-txtBMS, #f-txtTamil, #f-txtEst) { opacity: 0; }
 
   .finale-badge.in #f-plate circle {
     animation: badge-ring 0.85s var(--ease-soft, cubic-bezier(0.22,1,0.36,1)) both;
@@ -1256,6 +1257,7 @@ html:not(.intro-skip) body:has(.splash:not(.done)) :is(.reveal-load, .blade, .he
   .finale-badge.in #f-txtBMS        { animation: badge-word 0.5s ease-out 1.42s both; }
   .finale-badge.in #f-txtRestaurant { animation: badge-word 0.5s ease-out 1.56s both; }
   .finale-badge.in #f-txtTamil      { animation: badge-word 0.5s ease-out 1.64s both; }
+  .finale-badge.in #f-txtEst        { animation: badge-word 0.5s ease-out 1.76s both; }
 
   @keyframes badge-ring { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
   @keyframes badge-leaf { from { opacity: 0; transform: scale(0.4); } to { opacity: 1; transform: scale(1); } }

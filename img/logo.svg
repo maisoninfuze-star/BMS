@@ -50,4 +50,7 @@
   <text id="txtTamil" x="256" y="374" text-anchor="middle"
         font-family="'Tamil MN','InaiMathi','Noto Sans Tamil','Nirmala UI',sans-serif" font-weight="700"
         font-size="42" fill="#171b1d">உணவகம்</text>
+      <text id="txtEst" x="256" y="416" text-anchor="middle"
+            font-family="'Satoshi','Avenir Next',system-ui,sans-serif" font-weight="700"
+            font-size="21" letter-spacing="6" fill="#171b1d">EST. 2010</text>
 </svg>

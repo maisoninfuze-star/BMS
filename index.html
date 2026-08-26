@@ -13,8 +13,8 @@
 <meta property="og:image" content="img/hero-counter.jpg">
 
 <link rel="icon" type="image/svg+xml" href="img/logo.svg">
-<link rel="preload" as="image" href="img/hero-counter.webp?v=39" media="(min-width: 761px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-counter-mobile.webp?v=39" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-counter.webp?v=40" media="(min-width: 761px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-counter-mobile.webp?v=40" media="(max-width: 760px)" fetchpriority="high">
 <script>
 /* Pre-paint: skip the opening splash on repeat views and for reduced motion.
    Runs before first paint so there is never a flash either way.
@@ -31,7 +31,7 @@ try {
 </script>
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&f[]=zodiak@400,401,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=39">
+<link rel="stylesheet" href="styles.css?v=40">
 
 <script type="application/ld+json">
 {
@@ -102,6 +102,9 @@ try {
       <text id="txtTamil" x="256" y="374" text-anchor="middle"
             font-family="'Tamil MN','InaiMathi','Noto Sans Tamil','Nirmala UI',sans-serif" font-weight="700"
             font-size="42" fill="#171b1d">உணவகம்</text>
+      <text id="txtEst" x="256" y="416" text-anchor="middle"
+            font-family="'Satoshi','Avenir Next',system-ui,sans-serif" font-weight="700"
+            font-size="21" letter-spacing="6" fill="#171b1d">EST. 2010</text>
     </svg>
   </div>
 </div>
@@ -145,8 +148,8 @@ try {
 <section class="hero" id="hero">
   <div class="hero-bg" aria-hidden="true">
     <picture>
-      <source media="(max-width: 760px)" srcset="img/hero-counter-mobile.webp?v=39">
-      <img src="img/hero-counter.webp?v=39" alt="" fetchpriority="high">
+      <source media="(max-width: 760px)" srcset="img/hero-counter-mobile.webp?v=40">
+      <img src="img/hero-counter.webp?v=40" alt="" fetchpriority="high">
     </picture>
     <div class="hero-scrim"></div>
     <div class="steam"></div>
@@ -189,7 +192,7 @@ try {
       <li class="card reveal" style="--d:.15s">
         <span class="craft-word">Slow</span>
         <h3>The biryani</h3>
-        <p>Turmeric-gold rice, browned onions and cashews, cooked slow with a spice-crusted piece and a boiled egg. Jaffna-deep, not mild.</p>
+        <p>Turmeric-gold rice and browned onions, cooked slow with a spice-crusted piece and a boiled egg. Jaffna-deep, not mild.</p>
       </li>
       <li class="card reveal" style="--d:.25s">
         <span class="craft-word">1 to 5</span>
@@ -207,11 +210,11 @@ try {
     <p class="menu-note reveal">Filmed on our own griddle, mid-service.</p>
     <div class="gal-grid">
       <figure class="gal-item card reveal">
-        <video class="gal-v" data-src="media/kitchen-1.mp4?v=39" poster="media/kitchen-1.webp?v=39" muted loop playsinline preload="none"></video>
+        <video class="gal-v" data-src="media/kitchen-1.mp4?v=40" poster="media/kitchen-1.webp?v=40" muted loop playsinline preload="none"></video>
         <figcaption>Roti, egg and vegetables going under the blades.</figcaption>
       </figure>
       <figure class="gal-item card reveal" style="--d:.12s">
-        <video class="gal-v" data-src="media/kitchen-2.mp4?v=39" poster="media/kitchen-2.webp?v=39" muted loop playsinline preload="none"></video>
+        <video class="gal-v" data-src="media/kitchen-2.mp4?v=40" poster="media/kitchen-2.webp?v=40" muted loop playsinline preload="none"></video>
         <figcaption>Chopped and folded until it becomes one dish.</figcaption>
       </figure>
     </div>
@@ -226,7 +229,7 @@ try {
 
     <div class="bento">
       <figure class="cell cell-biryani iw" style="--d:.05s">
-        <img src="img/biryani.webp" alt="Sri Lankan chicken biryani with turmeric-gold rice, fried onions, cashews and a boiled egg" loading="lazy">
+        <img src="img/cat-biryani.webp?v=40" alt="Sri Lankan chicken biryani with turmeric-gold rice and a spiced fried piece" loading="lazy">
         <figcaption><strong>Chicken Biryani</strong><span>The one the reviews argue about. Also in mutton.</span></figcaption>
       </figure>
 
@@ -392,6 +395,9 @@ try {
       <text id="f-txtTamil" x="256" y="374" text-anchor="middle"
             font-family="'Tamil MN','InaiMathi','Noto Sans Tamil','Nirmala UI',sans-serif" font-weight="700"
             font-size="42" fill="#171b1d">உணவகம்</text>
+      <text id="f-txtEst" x="256" y="416" text-anchor="middle"
+            font-family="'Satoshi','Avenir Next',system-ui,sans-serif" font-weight="700"
+            font-size="21" letter-spacing="6" fill="#171b1d">EST. 2010</text>
     </svg>
     </div>
     <h2 class="rm"><span>Come hear it for yourself.</span></h2>
@@ -431,15 +437,16 @@ try {
       <a href="menu.html">Menu</a>
       <a href="catering.html">Catering</a>
       <a href="https://www.instagram.com/bmsrestaurant/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://maps.google.com/?q=12205+Boulevard+Gouin+O,+Pierrefonds,+QC+H8Z+1V9" target="_blank" rel="noopener">Google</a>
     </nav>
     <p class="foot-note">© 2026 Restaurant BMS. Closed Wednesdays.</p>
   </div>
 </footer>
 
-<script src="js/lenis.min.js?v=39"></script>
-<script src="js/gsap.min.js?v=39"></script>
-<script src="js/ScrollTrigger.min.js?v=39"></script>
-<script src="app.js?v=39"></script>
-<script src="js/motion.js?v=39"></script>
+<script src="js/lenis.min.js?v=40"></script>
+<script src="js/gsap.min.js?v=40"></script>
+<script src="js/ScrollTrigger.min.js?v=40"></script>
+<script src="app.js?v=40"></script>
+<script src="js/motion.js?v=40"></script>
 </body>
 </html>

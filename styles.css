@@ -507,6 +507,23 @@ a { color: inherit; }
   margin-top: 1.7rem;
   border: 1px solid var(--line);
 }
+/* Multi-photo category galleries: a lead square, then a second shot
+   below it - square in a pair grid when there are three, full-width
+   wide crop when there are two. Categories with one photo keep the
+   single .mc-shot untouched. */
+.mc-shots {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-top: 1.7rem;
+  max-width: 340px;
+}
+.mc-shots .mc-shot { margin-top: 0; max-width: none; }
+.mc-shots .mc-shot--lead { grid-column: 1 / -1; }
+.mc-shots .mc-shot--wide { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+@media (max-width: 900px) {
+  .mc-shots { max-width: 260px; margin-top: 1.2rem; gap: 0.5rem; }
+}
+
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .mc-shot { transition: scale 0.7s var(--ease-soft), border-color 0.4s var(--ease-soft); }
   .menu-cat:hover .mc-shot { scale: 1.02; border-color: rgba(122, 192, 67, 0.35); }

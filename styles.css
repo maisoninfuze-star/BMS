@@ -394,8 +394,7 @@ a { color: inherit; }
 .cell-biryani { grid-column: span 5; grid-row: span 2; }
 .cell-rolls   { grid-column: span 4; }
 .cell-spice   { grid-column: span 3; }
-.cell-chili   { grid-column: span 3; }
-.cell-hoppers { grid-column: span 4; }
+.cell-chili   { grid-column: span 7; }
 
 .cell-spice {
   background: var(--brand); color: var(--ink);
@@ -1057,7 +1056,6 @@ html.wipe-in.wipe-out body::before {
   .cell-rolls   { grid-column: span 3; }
   .cell-chili   { grid-column: span 3; }
   .cell-spice   { grid-column: span 6; grid-row: auto; min-height: 0; }
-  .cell-hoppers { grid-column: span 6; }
   .spice-big { font-size: 1.9rem; }
   .cell-spice { gap: 0.8rem; }
 

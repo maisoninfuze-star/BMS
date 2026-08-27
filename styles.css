@@ -907,6 +907,17 @@ html.lenis, html.lenis body { height: auto; }
 .lede-link { color: var(--brand); text-decoration: none; border-bottom: 1px solid rgba(122, 192, 67,0.4); }
 .lede-link:hover { border-bottom-color: var(--brand); }
 
+/* ── Footer socials ──────────────────────────────────────── */
+.foot-social { display: flex; gap: 0.8rem; margin-top: 1.4rem; }
+.foot-social a {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line); color: var(--bone-dim);
+  transition: border-color 0.3s var(--ease-soft), color 0.3s var(--ease-soft), translate 0.3s var(--ease-soft);
+}
+.foot-social a:hover { border-color: var(--brand); color: var(--brand); translate: 0 -2px; }
+.foot-social svg { width: 20px; height: 20px; }
+
 .foot-links { display: flex; gap: 1.6rem; margin-top: 0.4rem; }
 .foot-links a { font-size: 0.9rem; color: var(--bone-dim); text-decoration: none; }
 .foot-links a:hover { color: var(--bone); }

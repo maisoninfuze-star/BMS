@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carte QR · Restaurant BMS</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="img/logo.svg">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0e2a1c; --brand:#7ac043; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3a3a;font-family:'Satoshi',system-ui,sans-serif;color:var(--ink);
+       display:flex;flex-direction:column;align-items:center;gap:1rem;padding:2rem 1rem}
+  .hint{color:#ddd;font-size:.85rem;text-align:center}
+  .card{width:4in;height:6in;background:#fff;border-radius:.08in;overflow:hidden;
+        display:flex;flex-direction:column;align-items:center;text-align:center;
+        padding:.3in .35in;box-shadow:0 10px 40px rgba(0,0,0,.45)}
+  .card .rule{width:.6in;height:3px;background:var(--brand);border-radius:2px;margin:.11in 0}
+  .card img.logo{width:.85in;height:.85in}
+  .mark{font-family:'Clash Display',sans-serif;font-weight:700;font-size:.3in;line-height:1.05;margin-top:.06in}
+  .tamil{color:var(--brand);font-size:.15in;margin-top:.02in}
+  .scan{font-family:'Clash Display',sans-serif;font-weight:600;font-size:.19in;line-height:1.2}
+  .scan small{display:block;font-family:'Satoshi',sans-serif;font-weight:500;font-size:.13in;color:#5a6b5f;margin-top:.02in}
+  .qr{width:1.9in;height:1.9in;margin:.11in 0 .07in;border:3px solid var(--ink);border-radius:.1in}
+  .url{font-size:.09in;color:#8a978d;letter-spacing:.01em}
+  .foot{margin-top:auto;font-size:.12in;line-height:1.45;color:#33473b}
+  .foot b{font-size:.15in;color:var(--ink)}
+  @media print{
+    body{background:#fff;padding:0;display:block}
+    .hint{display:none}
+    .card{box-shadow:none;border-radius:0;margin:0 auto}
+    @page{size:4in 6in;margin:0}
+  }
+</style>
+</head>
+<body>
+<p class="hint">Carte 4 × 6 po — Imprimer avec « marges : aucune ». / 4 × 6 in card — print with margins set to none.</p>
+<div class="card">
+  <img class="logo" src="img/logo.svg" alt="Restaurant BMS">
+  <div class="mark">Restaurant BMS</div>
+  <div class="tamil" lang="ta">உணவகம்</div>
+  <div class="rule"></div>
+  <p class="scan">Scannez pour le menu<small>Scan for the menu</small></p>
+  <img class="qr" src="img/qr-menu.svg" alt="Code QR du menu">
+  <p class="url">maisoninfuze-star.github.io/BMS/menu-qr.html</p>
+  <p class="foot"><b>(514) 683-9090</b><br>12205, boul. Gouin O, Pierrefonds<br>11 h – 20 h · Fermé le mercredi · 100 % halal</p>
+</div>
+</body>
+</html>

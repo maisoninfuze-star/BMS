@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu · Restaurant BMS</title>
+<meta name="description" content="Menu du Restaurant BMS, cuisine sri-lankaise halal à Pierrefonds. Kothu rotti, biryani, riz frit, curry, pittu, string hoppers, dosai. (514) 683-9090.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e2a1c">
+<link rel="icon" type="image/svg+xml" href="img/logo.svg">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0e2a1c; --moss:#123321; --bone:#f1ede2; --dim:#a0b2a3;
+    --brand:#7ac043; --line:rgba(241,237,226,.14);
+    --fd:'Clash Display','Avenir Next Condensed',sans-serif;
+    --fb:'Satoshi',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--bone);font-family:var(--fb);font-size:1rem;line-height:1.45;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:44rem;margin-inline:auto;padding-inline:1.25rem}
+
+  /* header */
+  header{text-align:center;padding:2.2rem 1.25rem 1.4rem}
+  header img{width:72px;height:72px;display:block;margin:0 auto .8rem}
+  .mark{font-family:var(--fd);font-weight:700;font-size:2rem;letter-spacing:.02em;line-height:1.1}
+  .tamil{display:block;color:var(--brand);font-size:1.05rem;margin-top:.15rem}
+  .tag{color:var(--dim);font-size:.92rem;margin-top:.55rem}
+  .meta{color:var(--dim);font-size:.85rem;margin-top:.8rem;line-height:1.7}
+  .meta a{color:var(--bone);text-decoration:none;font-weight:700}
+  .halal{display:inline-block;border:1px solid var(--brand);color:var(--brand);border-radius:99px;padding:.15rem .7rem;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:.9rem}
+
+  /* chip nav */
+  nav{position:sticky;top:0;z-index:5;background:linear-gradient(var(--ink) 78%,rgba(14,42,28,0));padding:.6rem 0 .9rem}
+  nav .row{display:flex;gap:.4rem;overflow-x:auto;padding-inline:1.25rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  nav .row::-webkit-scrollbar{display:none}
+  nav a{flex:0 0 auto;color:var(--bone);text-decoration:none;font-size:.82rem;font-weight:700;border:1px solid var(--line);border-radius:99px;padding:.34rem .8rem;background:var(--moss)}
+  nav a:active{background:var(--brand);color:var(--ink)}
+
+  /* global notes */
+  .notes{border:1px solid var(--line);border-radius:.8rem;padding:.9rem 1rem;font-size:.86rem;color:var(--dim);margin-top:.4rem}
+  .notes b{color:var(--bone)}
+  .notes p+p{margin-top:.35rem}
+
+  /* sections */
+  section{padding-top:2.3rem}
+  h2{font-family:var(--fd);font-weight:600;font-size:1.5rem;line-height:1.15;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+  h2 small{font-family:var(--fb);font-weight:500;color:var(--brand);font-size:.95rem}
+  .note{color:var(--dim);font-size:.85rem;margin-top:.35rem;max-width:36rem}
+  ul{list-style:none;margin-top:1rem}
+  li{display:grid;grid-template-columns:2.2rem 1fr auto;gap:.6rem;align-items:baseline;padding:.62rem 0;border-bottom:1px solid var(--line)}
+  li:last-child{border-bottom:0}
+  .c{color:var(--brand);font-size:.74rem;font-weight:700;letter-spacing:.05em}
+  .n{font-weight:700;font-size:.98rem}
+  .n em{display:block;font-style:normal;font-weight:400;color:var(--dim);font-size:.85rem;margin-top:.1rem}
+  .n .d{display:block;font-weight:400;color:var(--dim);font-size:.82rem;margin-top:.2rem;max-width:30rem}
+  .p{font-family:var(--fd);font-weight:600;font-size:1.02rem;white-space:nowrap;text-align:right}
+  .p small{display:block;font-family:var(--fb);font-weight:500;color:var(--dim);font-size:.68rem}
+  .v{font-style:normal;display:inline-block;vertical-align:.08em;margin-left:.4rem;border:1px solid var(--brand);color:var(--brand);border-radius:99px;padding:0 .42rem;font-size:.62rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+
+  /* footer */
+  .fin{margin-top:2.6rem;border-top:1px solid var(--line);padding:1.6rem 0 7rem;color:var(--dim);font-size:.85rem;text-align:center;line-height:1.7}
+  .fin b{color:var(--bone)}
+
+  /* call bar */
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;gap:.6rem;justify-content:center;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(14,42,28,.92);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .bar a{flex:1;max-width:16rem;text-align:center;text-decoration:none;font-weight:700;font-size:.95rem;border-radius:99px;padding:.7rem 1rem}
+  .bar .call{background:var(--brand);color:var(--ink)}
+  .bar .map{border:1px solid var(--line);color:var(--bone)}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="img/logo.svg" alt="">
+  <div class="mark">Restaurant BMS<span class="tamil" lang="ta">உணவகம்</span></div>
+  <p class="tag">Cuisine sri-lankaise · Sri Lankan Kitchen · Pierrefonds</p>
+  <span class="halal">100 % Halal</span>
+  <p class="meta">
+    <a href="tel:+15146839090">(514) 683-9090</a><br>
+    12205, boulevard Gouin O, Pierrefonds<br>
+    Ouvert 11 h – 20 h · Fermé le mercredi / Open 11–8 · Closed Wednesdays
+  </p>
+</header>
+
+<nav aria-label="Sections">
+  <div class="row">
+    <a href="#entrees">Entrées</a>
+    <a href="#kothu">Kothu</a>
+    <a href="#biryani">Biryani</a>
+    <a href="#riz">Riz frit</a>
+    <a href="#nouilles">Nouilles</a>
+    <a href="#devil">Devil</a>
+    <a href="#curry">Curry</a>
+    <a href="#thali">Thali</a>
+    <a href="#pittu">Pittu</a>
+    <a href="#hoppers">String Hoppers</a>
+    <a href="#dosai">Dosai · Idly</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<div class="notes">
+  <p><b>Épices de 1 à 5</b> sur chaque plat — dites-le une fois, la cuisine s’en souvient. / <b>Spice runs 1 to 5</b> on every dish.</p>
+  <p><b>Extras sur tout plat / add to any dish :</b> légumes / veggies 4 $ · viande / meat 4 $ · poulet frit / fried chicken 3 $ · œuf / egg 1 $.</p>
+</div>
+
+<section id="entrees">
+  <h2>Entrées <small>Short Eats · சிற்றுண்டி</small></h2>
+  <p class="note">Frites à la commande. À la pièce sauf indication. / Fried to order. Priced per piece unless noted.</p>
+  <ul>
+    <li><span class="c">S1</span><span class="n">Methu Vada<i class="v">vég</i></span><span class="p">0.75 $</span></li>
+    <li><span class="c">S2</span><span class="n">Masala Vada<i class="v">vég</i></span><span class="p">0.75 $</span></li>
+    <li><span class="c">S3</span><span class="n">Patty aux légumes<i class="v">vég</i><em>Vegetable Patty</em></span><span class="p">3 / 1.50 $</span></li>
+    <li><span class="c">S4</span><span class="n">Rouleau de poisson<em>Fish Patty</em></span><span class="p">2 / 1.25 $</span></li>
+    <li><span class="c">S5</span><span class="n">Rouleau de pomme de terre<i class="v">vég</i><em>Potato Roll</em></span><span class="p">1.25 $</span></li>
+    <li><span class="c">S6</span><span class="n">Rouleau de légumes<i class="v">vég</i><em>Vege Roll</em></span><span class="p">1.50 $</span></li>
+    <li><span class="c">S7</span><span class="n">Rouleau de bœuf<em>Beef Roll</em></span><span class="p">1.75 $</span></li>
+    <li><span class="c">S8</span><span class="n">Rouleau d’agneau<em>Mutton Roll</em></span><span class="p">1.75 $</span></li>
+    <li><span class="c">S9</span><span class="n">Tortilla au poulet<em>Chicken Tortilla</em></span><span class="p">1.75 $</span></li>
+    <li><span class="c">S10</span><span class="n">Tortilla aux légumes<i class="v">vég</i><em>Vege Tortilla</em></span><span class="p">1.25 $</span></li>
+    <li><span class="c">S11</span><span class="n">Rotti de farine<i class="v">vég</i><em>Rotti</em></span><span class="p">2.00 $</span></li>
+    <li><span class="c">S12</span><span class="n">Pain au poisson<em>Fish Bun</em></span><span class="p">2.00 $</span></li>
+    <li><span class="c">S13</span><span class="n">Pain seeni sambal<i class="v">vég</i><em>Seeni Sambal Bun</em></span><span class="p">1.75 $</span></li>
+    <li><span class="c">S14</span><span class="n">Methi Veddi</span><span class="p">2.50 $</span></li>
+    <li><span class="c">S15</span><span class="n">Rotti à l’agneau<em>Mutton Rotti</em></span><span class="p">4.00 $</span></li>
+  </ul>
+</section>
+
+<section id="kothu">
+  <h2>Kothu Rotti <small>கொத்து</small></h2>
+  <p class="note">Coupé sur la plaque à la commande. Œuf en extra +1 $. / Chopped on the iron when you order. Extra egg +$1.</p>
+  <ul>
+    <li><span class="c">K1</span><span class="n">Kothu rotti végétarien<i class="v">vég</i><em>Vegetable Kothu Rotti</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">K2</span><span class="n">Kothu rotti aux œufs<em>Egg Kothu Rotti</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">K3</span><span class="n">Kothu rotti légumes et œufs<em>Vegetable &amp; Egg Kothu Rotti</em></span><span class="p">10.50 $</span></li>
+    <li><span class="c">K4</span><span class="n">Kothu rotti au poulet<em>Chicken Kothu Rotti</em></span><span class="p">10.50 $</span></li>
+    <li><span class="c">K5</span><span class="n">Kothu rotti au bœuf<em>Beef Kothu Rotti</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">K6</span><span class="n">Kothu rotti à l’agneau<em>Mutton Kothu Rotti</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">K7</span><span class="n">Dolphin Kottu · poulet<em>Dolphin Kottu · Chicken</em><span class="d">Version chargée, coupée fine, oignon rouge frais. / The loaded one, topped with fresh red onion.</span></span><span class="p">16.50 $</span></li>
+    <li><span class="c">K8</span><span class="n">Dolphin Kottu · agneau ou bœuf<em>Dolphin Kottu · Mutton or Beef</em></span><span class="p">17.50 $</span></li>
+  </ul>
+</section>
+
+<section id="biryani">
+  <h2>Biryani <small>பிரியாணி</small></h2>
+  <p class="note">Riz doré au curcuma, oignons frits, servi avec salsa maison. Poulet, agneau et bœuf : avec poulet frit et œuf dur. / Turmeric-gold rice with fried onions and salsa. Chicken, mutton and beef come with fried chicken and a boiled egg.</p>
+  <ul>
+    <li><span class="c">B1</span><span class="n">Biryani végétarien<i class="v">vég</i><em>Vegetarian Biryani</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">B2</span><span class="n">Biryani au poulet<em>Chicken Biryani</em></span><span class="p">10.50 $</span></li>
+    <li><span class="c">B3</span><span class="n">Biryani à l’agneau<em>Mutton Biryani</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">B4</span><span class="n">Biryani au bœuf<em>Beef Biryani</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">B5</span><span class="n">Biryani au poulet chili<em>Chilli Chicken Biryani</em></span><span class="p">16.50 $</span></li>
+  </ul>
+</section>
+
+<section id="riz">
+  <h2>Riz frit <small>Fried Rice · வறுத்த சோறு</small></h2>
+  <p class="note">Œuf en extra +1 $. / Extra egg +$1.</p>
+  <ul>
+    <li><span class="c">F1</span><span class="n">Riz frit végétarien<i class="v">vég</i><em>Vegetarian Fried Rice</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">F2</span><span class="n">Riz frit aux œufs<em>Egg Fried Rice</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">F3</span><span class="n">Riz frit au poulet<em>Chicken Fried Rice</em></span><span class="p">10.50 $</span></li>
+    <li><span class="c">F4</span><span class="n">Riz frit au bœuf<em>Beef Fried Rice</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">F5</span><span class="n">Riz frit aux crevettes<em>Shrimp Fried Rice</em></span><span class="p">13.00 $</span></li>
+    <li><span class="c">F6</span><span class="n">Riz frit aux fruits de mer<em>Seafood Fried Rice</em></span><span class="p">13.00 $</span></li>
+    <li><span class="c">F7</span><span class="n">Riz frit poulet et crevettes<em>Chicken &amp; Shrimp Fried Rice</em></span><span class="p">19.50 $</span></li>
+    <li><span class="c">F8</span><span class="n">Riz frit fruits de mer et poulet<em>Seafood &amp; Chicken Fried Rice</em></span><span class="p">19.50 $</span></li>
+    <li><span class="c">F9</span><span class="n">Riz frit poulet et bœuf<em>Chicken &amp; Beef Fried Rice</em></span><span class="p">16.50 $</span></li>
+    <li><span class="c">F10</span><span class="n">Riz frit poulet, bœuf et crevettes<em>Chicken, Beef &amp; Shrimp Fried Rice</em></span><span class="p">25.00 $</span></li>
+  </ul>
+</section>
+
+<section id="nouilles">
+  <h2>Nouilles <small>Noodles · நூடுல்ஸ்</small></h2>
+  <ul>
+    <li><span class="c">N1</span><span class="n">Nouilles aux légumes<i class="v">vég</i><em>Vegetable Noodles</em></span><span class="p">8.50 $</span></li>
+    <li><span class="c">N2</span><span class="n">Nouilles au poulet<em>Chicken Noodles</em></span><span class="p">10.50 $</span></li>
+    <li><span class="c">N3</span><span class="n">Nouilles au bœuf<em>Beef Noodles</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">N4</span><span class="n">Nouilles aux crevettes<em>Shrimp Noodles</em></span><span class="p">13.00 $</span></li>
+    <li><span class="c">N5</span><span class="n">Nouilles aux fruits de mer<em>Seafood Noodles</em></span><span class="p">13.00 $</span></li>
+    <li><span class="c">N6</span><span class="n">Nouilles poulet et crevettes<em>Chicken &amp; Shrimp Noodles</em></span><span class="p">19.50 $</span></li>
+    <li><span class="c">N7</span><span class="n">Nouilles fruits de mer et poulet<em>Seafood &amp; Chicken Noodles</em></span><span class="p">19.50 $</span></li>
+    <li><span class="c">N8</span><span class="n">Nouilles poulet et bœuf<em>Chicken &amp; Beef Noodles</em></span><span class="p">16.50 $</span></li>
+    <li><span class="c">N9</span><span class="n">Nouilles poulet, bœuf et crevettes<em>Chicken, Beef &amp; Shrimp Noodles</em></span><span class="p">25.00 $</span></li>
+  </ul>
+</section>
+
+<section id="devil">
+  <h2>Sauté · Devil <small>வறுவல்</small></h2>
+  <ul>
+    <li><span class="c">E1</span><span class="n">Poulet aux piments<em>Chilli Chicken</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">E2</span><span class="n">Sauté au poulet sans os<em>Boneless Chicken Devil</em></span><span class="p">14.00 $</span></li>
+    <li><span class="c">E3</span><span class="n">Sauté au bœuf<em>Beef Devil</em></span><span class="p">14.00 $</span></li>
+    <li><span class="c">E4</span><span class="n">Sauté aux crevettes<em>Shrimp Devil</em></span><span class="p">14.00 $</span></li>
+  </ul>
+</section>
+
+<section id="curry">
+  <h2>Curry <small>கறி</small></h2>
+  <p class="note">Deux formats : 12 oz / 16 oz. / Two sizes, priced 12 oz / 16 oz.</p>
+  <ul>
+    <li><span class="c">C1</span><span class="n">Curry végétarien<i class="v">vég</i><em>Vegetarian Curry</em></span><span class="p">7.50 / 9.50 $<small>12 oz / 16 oz</small></span></li>
+    <li><span class="c">C2</span><span class="n">Curry au poulet<em>Chicken Curry</em></span><span class="p">9.50 / 11.50 $<small>12 oz / 16 oz</small></span></li>
+    <li><span class="c">C3</span><span class="n">Curry au bœuf<em>Beef Curry</em></span><span class="p">11.50 / 13.50 $<small>12 oz / 16 oz</small></span></li>
+    <li><span class="c">C4</span><span class="n">Curry d’agneau<em>Mutton Curry</em></span><span class="p">11.50 / 13.50 $<small>12 oz / 16 oz</small></span></li>
+    <li><span class="c">C5</span><span class="n">Curry de poisson<em>Fish Curry</em><span class="d">À la pièce / by the piece : 1 · 2 · 3.</span></span><span class="p">6 / 11 / 16 $</span></li>
+    <li><span class="c">C6</span><span class="n">Curry aux crabes<em>Crab Curry</em><span class="d">3 morceaux / 3 pieces.</span></span><span class="p">16.00 $</span></li>
+  </ul>
+</section>
+
+<section id="thali">
+  <h2>Thali <small>தாலி</small></h2>
+  <ul>
+    <li><span class="c">T1</span><span class="n">Thali végétarien<i class="v">vég</i><em>Vegetarian Thali</em><span class="d">Riz avec 4 currys végétariens. / Rice with 4 vegetarian curries.</span></span><span class="p">10.00 $</span></li>
+    <li><span class="c">T2</span><span class="n">Thali non végétarien<em>Non-Vegetarian Thali</em><span class="d">Riz, 3 currys végétariens et un curry au choix : poulet, bœuf ou agneau. / Rice, 3 vegetarian curries and your choice of chicken, beef or lamb curry.</span></span><span class="p">13.00 $</span></li>
+    <li><span class="c">T3</span><span class="n">Thali au poisson<em>Fish Thali</em><span class="d">Riz, 3 currys végétariens et poisson. / Rice, 3 vegetarian curries and fish.</span></span><span class="p">14.00 $</span></li>
+    <li><span class="c">T4</span><span class="n">Spécial du vendredi · Riz thali légumes<i class="v">vég</i><em>Friday Special · Vegetable Rice Thali</em><span class="d">Riz, 5 currys végétariens, papadam, piment frit, petit vadai, rasam et payasam. / Rice, 5 vegetarian curries, papadam, fried chilli, small vadai, rasam and payasam.</span></span><span class="p">11.00 $</span></li>
+    <li><span class="c">T5</span><span class="n">Spécial du dimanche · Riz sur feuille de bananier<em>Sunday Special · Banana Leaf Moon Rice</em><span class="d">Riz sur feuille de bananier : œuf dur, petits poissons frits, poisson long frit, curry de poisson, curry de crabe et crevettes. Deux currys au choix du chef. / Rice on a banana leaf with a boiled egg, fried fish, fish curry, crab curry and shrimp. Two curries, chef’s choice.</span></span><span class="p">Demandez<small>Ask us</small></span></li>
+  </ul>
+</section>
+
+<section id="pittu">
+  <h2>Pittu <small>புட்டு</small></h2>
+  <p class="note">Cuit vapeur, servi avec aubergine ou sambal. Coupé kottu sur demande. / Steamed, served with eggplant or sambal. Chopped to order if you want it kottu.</p>
+  <ul>
+    <li><span class="c">P1</span><span class="n">Pittu nature<i class="v">vég</i><em>Plain Pittu</em></span><span class="p">8.00 $</span></li>
+    <li><span class="c">P2</span><span class="n">Pittu kottu végétarien<i class="v">vég</i><em>Vegetarian Pittu Kottu</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">P3</span><span class="n">Pittu kottu aux œufs<em>Egg Pittu Kottu</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">P4</span><span class="n">Pittu kottu au poulet<em>Chicken Pittu Kottu</em></span><span class="p">10.50 $</span></li>
+    <li><span class="c">P5</span><span class="n">Pittu kottu au bœuf<em>Beef Pittu Kottu</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">P6</span><span class="n">Pittu kottu à l’agneau<em>Mutton Pittu Kottu</em></span><span class="p">12.00 $</span></li>
+  </ul>
+</section>
+
+<section id="hoppers">
+  <h2>String Hoppers <small>இடியப்பம்</small></h2>
+  <p class="note">Servis avec sothi et sambal. / Served with sothi and sambal.</p>
+  <ul>
+    <li><span class="c">H1</span><span class="n">25 string hoppers<i class="v">vég</i></span><span class="p">8.00 $</span></li>
+    <li><span class="c">H2</span><span class="n">50 string hoppers<i class="v">vég</i></span><span class="p">15.00 $</span></li>
+    <li><span class="c">H3</span><span class="n">100 string hoppers<i class="v">vég</i></span><span class="p">30.00 $</span></li>
+    <li><span class="c">H4</span><span class="n">String hopper kottu végétarien<i class="v">vég</i><em>Vegetarian String Hopper Kottu</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">H5</span><span class="n">String hopper kottu aux œufs<em>Egg String Hopper Kottu</em></span><span class="p">9.50 $</span></li>
+    <li><span class="c">H6</span><span class="n">String hopper kottu au poulet<em>Chicken String Hopper Kottu</em></span><span class="p">10.50 $</span></li>
+    <li><span class="c">H7</span><span class="n">String hopper kottu au bœuf<em>Beef String Hopper Kottu</em></span><span class="p">12.00 $</span></li>
+    <li><span class="c">H8</span><span class="n">String hopper kottu à l’agneau<em>Mutton String Hopper Kottu</em></span><span class="p">12.00 $</span></li>
+  </ul>
+</section>
+
+<section id="dosai">
+  <h2>Dosai · Idly <small>தோசை · இட்லி</small></h2>
+  <p class="note">Servis avec chutney et sambar. Ghee ou œuf en extra +1 $. / Served with chutney and sambar. Extra ghee or egg +$1.</p>
+  <ul>
+    <li><span class="c">D1</span><span class="n">Dosai nature (5 mcx)<i class="v">vég</i><em>Plain Dosai (5 pcs)</em></span><span class="p">8.00 $</span></li>
+    <li><span class="c">D2</span><span class="n">Dosai au beurre clarifié<i class="v">vég</i><em>Ghee Dosai</em></span><span class="p">9.00 $</span></li>
+    <li><span class="c">D3</span><span class="n">Masala dosai<i class="v">vég</i></span><span class="p">9.00 $</span></li>
+    <li><span class="c">D4</span><span class="n">Dosai aux œufs<em>Egg Dosai</em></span><span class="p">9.00 $</span></li>
+    <li><span class="c">D5</span><span class="n">Idly (5 mcx)<i class="v">vég</i><em>Idly (5 pcs)</em></span><span class="p">8.00 $</span></li>
+  </ul>
+</section>
+
+<p class="fin">
+  <b>Sucreries sri-lankaises et indiennes disponibles</b> — veuillez commander à l’avance.<br>
+  Sri Lankan and Indian sweets available — please order in advance.<br><br>
+  Les prix sont sujets à changement sans préavis. / Prices are subject to change without notice.<br>
+  © 2026 Restaurant BMS · <a href="index.html" style="color:var(--dim)">bms — le site / the website</a>
+</p>
+
+</main>
+
+<div class="bar">
+  <a class="call" href="tel:+15146839090">Appelez · Call (514) 683-9090</a>
+  <a class="map" href="https://maps.google.com/?q=12205+Boulevard+Gouin+O,+Pierrefonds,+QC+H8Z+1V9" target="_blank" rel="noopener">Itinéraire</a>
+</div>
+
+</body>
+</html>

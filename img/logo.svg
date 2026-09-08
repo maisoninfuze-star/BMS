@@ -59,4 +59,7 @@
       <text id="txtEst" x="256" y="416" text-anchor="middle"
             font-family="'Satoshi','Avenir Next',system-ui,sans-serif" font-weight="700"
             font-size="21" letter-spacing="6" fill="#171b1d">EST. 2010</text>
+  <text id="txtPhone" x="256" y="462" text-anchor="middle"
+        font-family="'Satoshi','Avenir Next',system-ui,sans-serif" font-weight="700"
+        font-size="27" letter-spacing="3.5" fill="#171b1d">+1 514-683-9090</text>
 </svg>

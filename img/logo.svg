@@ -2,7 +2,7 @@
   <!-- Recreation of the BMS Instagram badge: white circle, curry-leaf
        wreath, ornamental plate rim, Restaurant / BMS / உணவகம் -->
   <defs>
-    <path id="leaf" d="M0 0 C 8 -14, 30 -16, 40 -2 C 28 8, 8 8, 0 0 Z"/>
+    <path id="leaf" d="M0 0 C 9 -15, 33 -17, 46 -2 C 33 12, 9 11, 0 0 Z"/>
     <linearGradient id="leafFill" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#3b9a3f"/>
       <stop offset="1" stop-color="#57b84b"/>
@@ -22,19 +22,25 @@
   <!-- left curry-leaf branch -->
   <g id="branchL">
     <path class="stem" d="M150 418 Q 44 320 78 138" fill="none" stroke="#a34b28" stroke-width="5" stroke-linecap="round" pathLength="1"/>
-    <g class="leaf-g" style="--i:0"><g transform="translate(121 386.5) rotate(-72.5)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
-    <g class="leaf-g" style="--i:1"><g transform="translate(121 386.5) rotate(-182.5) scale(1 -1)"><use href="#leaf" fill="#3b9a3f"/></g></g>
-    <g class="leaf-g" style="--i:2"><g transform="translate(99 351.6) rotate(-62.5) scale(0.95)"><use href="#leaf" fill="#4caf50"/></g></g>
-    <g class="leaf-g" style="--i:3"><g transform="translate(99 351.6) rotate(-172.5) scale(0.95 -0.95)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
-    <g class="leaf-g" style="--i:4"><g transform="translate(83 312.5) rotate(-52.5) scale(0.9)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
-    <g class="leaf-g" style="--i:5"><g transform="translate(83 312.5) rotate(-162.5) scale(0.9 -0.9)"><use href="#leaf" fill="#4caf50"/></g></g>
-    <g class="leaf-g" style="--i:6"><g transform="translate(73.2 270.2) rotate(-43.4) scale(0.85)"><use href="#leaf" fill="#3b9a3f"/></g></g>
-    <g class="leaf-g" style="--i:7"><g transform="translate(73.2 270.2) rotate(-153.4) scale(0.85 -0.85)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
-    <g class="leaf-g" style="--i:8"><g transform="translate(70 223) rotate(-35.4) scale(0.8)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
-    <g class="leaf-g" style="--i:9"><g transform="translate(70 223) rotate(-145.4) scale(0.8 -0.8)"><use href="#leaf" fill="#4caf50"/></g></g>
-    <g class="leaf-g" style="--i:10"><g transform="translate(72.6 173.6) rotate(-28.4) scale(0.75)"><use href="#leaf" fill="#3b9a3f"/></g></g>
-    <g class="leaf-g" style="--i:11"><g transform="translate(72.6 173.6) rotate(-138.4) scale(0.75 -0.75)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
-    <g class="leaf-g" style="--i:12"><g transform="translate(78 138) rotate(-75) scale(0.7)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:0"><g transform="translate(139.8 408.0) rotate(-82.1)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:1"><g transform="translate(139.8 408.0) rotate(-186.1) scale(1.0 -1.0)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:2"><g transform="translate(121.3 386.7) rotate(-75.5) scale(0.96)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:3"><g transform="translate(121.3 386.7) rotate(-179.5) scale(0.96 -0.96)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:4"><g transform="translate(105.8 363.8) rotate(-68.8) scale(0.92)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:5"><g transform="translate(105.8 363.8) rotate(-172.8) scale(0.92 -0.92)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:6"><g transform="translate(93.0 339.1) rotate(-62.1) scale(0.87)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:7"><g transform="translate(93.0 339.1) rotate(-166.1) scale(0.87 -0.87)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:8"><g transform="translate(83.0 312.8) rotate(-55.6) scale(0.83)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:9"><g transform="translate(83.0 312.8) rotate(-159.6) scale(0.83 -0.83)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:10"><g transform="translate(75.8 284.8) rotate(-49.4) scale(0.79)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:11"><g transform="translate(75.8 284.8) rotate(-153.4) scale(0.79 -0.79)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:12"><g transform="translate(71.3 255.1) rotate(-43.6) scale(0.74)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:13"><g transform="translate(71.3 255.1) rotate(-147.6) scale(0.74 -0.74)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:14"><g transform="translate(69.8 223.8) rotate(-38.4) scale(0.7)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:15"><g transform="translate(69.8 223.8) rotate(-142.4) scale(0.7 -0.7)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
+    <g class="leaf-g" style="--i:16"><g transform="translate(71.0 190.7) rotate(-33.6) scale(0.66)"><use href="#leaf" fill="#3b9a3f"/></g></g>
+    <g class="leaf-g" style="--i:17"><g transform="translate(71.0 190.7) rotate(-137.6) scale(0.66 -0.66)"><use href="#leaf" fill="#4caf50"/></g></g>
+    <g class="leaf-g" style="--i:18"><g transform="translate(76.1 148.8) rotate(-80.6) scale(0.6)"><use href="#leaf" fill="url(#leafFill)"/></g></g>
   </g>
 
   <!-- right branch: mirror -->
